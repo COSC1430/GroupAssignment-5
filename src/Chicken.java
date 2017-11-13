@@ -2,16 +2,17 @@ import java.util.Random;
 class Chicken extends Actor{
 
     char moves[] = {'w','s','a','d'};
+    
     public Chicken(){
         Random RNG = new Random();
         
-        currenRow = RNG.nextInt(9);
+        currRow = RNG.nextInt(9);
         
-        currenColumn = RNG.nextInt(9);
+        currCol = RNG.nextInt(9);
         
-        while(currenRow==4 && currenColumn==4){
-        	currenRow = RNG.nextInt(9);
-            currenColumn = RNG.nextInt(9);
+        while(currRow==4 && currCol==4){
+        	currRow = RNG.nextInt(9);
+            currCol = RNG.nextInt(9);
         }
         data = 'C';
     }
@@ -22,7 +23,7 @@ class Chicken extends Actor{
         
         char move = moves[a];
         
-        while(!borderCheck(move,currenRow,currenColumn)){
+        while(!borderCheck(currRow,currCol,move)){
         	
             a = RNG.nextInt(4);
             
@@ -31,16 +32,16 @@ class Chicken extends Actor{
         //user input to decide direction
         
         if(move=='w'){	//UP
-        	currenRow-=1; 
+        	currRow-=1; 
         }
         if(move=='s'){	//DOWN
-        	currenRow+=1;
+        	currRow+=1;
         }
         if(move=='a'){	//LEFT
-        	currenColumn-=1;
+        	currCol-=1;
         }
         if(move=='d'){	//RIGHT
-        	currenColumn+=1;
+        	currCol+=1;
         }
         return 1;
     }
