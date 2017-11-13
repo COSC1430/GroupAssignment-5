@@ -13,7 +13,7 @@ public int move(){
         if(move=='q'){
         return -1;
         }
-        if(!borderCheck(move,this.currRow,this.currCol)){
+        if(!borderCheck(this.currRow,this.currCol,move)){
         return 0;
         }
         if(move=='w'){

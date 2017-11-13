@@ -17,7 +17,7 @@ class Chicken extends Actor{
         Random rand = new Random();
         int a = rand.nextInt(4);
         char move = moves[a];
-        while(!borderCheck(move,currRow,currCol)){
+        while(!borderCheck(currRow,currCol,move)){
             a = rand.nextInt(4);
             move = moves[a];
         }

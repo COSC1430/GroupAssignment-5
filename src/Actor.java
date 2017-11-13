@@ -3,7 +3,7 @@ abstract class Actor{
     int currCol;
     char data;
 
-    public static boolean borderCheck(char move, int currRow, int currCol){
+    public static boolean borderCheck( int currRow, int currCol,char move){
         if(move=='w' && currRow==0){
             return false;
         }
