@@ -1,8 +1,8 @@
 import java.util.Random;
 class Chicken extends Actor{
 
-    char moves[] = {'w','s','a','d'};
-    public Chicken(){
+    private char moves[] = {'w','s','a','d'};
+    Chicken(){
         Random rand = new Random();
         currRow = rand.nextInt(9);
         currCol = rand.nextInt(9);

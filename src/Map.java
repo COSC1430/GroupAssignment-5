@@ -1,6 +1,6 @@
 class Map{
-    char grid[][];
-    public Map(){
+    private char grid[][];
+    Map(){
         grid = new char[9][9];
         for(int i=0;i<9;i++){
             for(int j=0;j<9;j++){
@@ -8,8 +8,8 @@ class Map{
             }
         }
     }
-    public void update(int row, int col, char data){
-//Removing previous occurance of data(Chicken or Player)
+    void update(int row, int col, char data){
+//Removing previous occurrence of data(Chicken or Player)
         for(int i=0;i<9;i++){
             for(int j=0;j<9;j++){
                 if(grid[i][j]==data){
@@ -20,7 +20,7 @@ class Map{
         }
         grid[row][col] = data;
     }
-    public void printMap(){
+    void printMap(){
         System.out.println();
         for(int i=0;i<9;i++){
             for(int j=0;j<9;j++){

@@ -1,6 +1,6 @@
 import java.util.Scanner;
 class Player extends Actor{
-    public Player(){
+    Player(){
         currRow = 4;
         currCol = 4;
         data = 'P';

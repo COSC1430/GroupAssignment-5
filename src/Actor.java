@@ -3,20 +3,8 @@ abstract class Actor{
     int currCol;
     char data;
 
-    public static boolean borderCheck( int currRow, int currCol,char move){
-        if(move=='w' && currRow==0){
-            return false;
-        }
-        if(move=='s' && currRow==8){
-            return false;
-        }
-        if(move=='a' && currCol==0){
-            return false;
-        }
-        if(move=='d' && currCol==8){
-            return false;
-        }
-        return true;
+    static boolean borderCheck(int currRow, int currCol, char move) {
+        return (move != 'w' || currRow != 0) && (move != 's' || currRow != 8) && (move != 'a' || currCol != 0) && (move != 'd' || currCol != 8);
     }
     abstract int move();
 }
