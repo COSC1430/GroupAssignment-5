@@ -1,50 +1,22 @@
-public abstract class Actor {
-    private int currRow, currCol;
-    private char data;
+abstract class Actor{
+    int currRow;
+    int currCol;
+    char data;
 
-    Map map;
-    public Actor(int currRow, int currCol,char data){
-        this.data=data;
-        this.currRow=currRow;
-        this.currCol=currCol;
-    }
-
-  /*  public int getCurrRow() {
-        return currRow;
-    }
-
-    public void setCurrRow(int currRow) {
-        this.currRow = currRow;
-    }
-
-    public int getCurrCol(int i) {
-        return currCol;
-    }
-
-    public void setCurrCol(int currCol) {
-        this.currCol = currCol;
-    }
-
-    public char getData() {
-        return data;
-    }
-
-    public void setData(char data) {
-        this.data = data;
-    }
-*/
-    public boolean borderCheck(){
-        for (int i = 0; i < map.map.length; i++)
-        {
-            for (int j = 0; j < map.map[i].length; j++)
-            {
-                if (i == 0 || j == 0 || i == map.map.length - 1 || j == map.map[i].length - 1)
-                {
-                   return true;
-                }
-            }
+    public static boolean borderCheck(char move, int currRow, int currCol){
+        if(move=='w' && currRow==0){
+            return false;
         }
-        return false;
+        if(move=='s' && currRow==8){
+            return false;
+        }
+        if(move=='a' && currCol==0){
+            return false;
+        }
+        if(move=='d' && currCol==8){
+            return false;
+        }
+        return true;
     }
-    abstract void move(int row,int col, char data);
+    abstract int move();
 }
