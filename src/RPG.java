@@ -6,9 +6,9 @@ public class RPG{
         M.update(player.currRow,player.currCol,player.data);
         M.update(chicken.currRow,chicken.currCol,chicken.data);
         M.printMap();
-        int in = player.move();
-        while(in!=-1){
-            if(in==1){
+        int input = player.move();
+        while(input!=-1){
+            if(input==1){
                 M.update(player.currRow,player.currCol,player.data);
                 if(chicken.currRow==player.currRow && chicken.currCol==player.currCol){
                     M.printMap();
@@ -28,7 +28,7 @@ public class RPG{
             }else{
                 System.out.println("Invalid Move");
             }
-            in = player.move();
+            input = player.move();
         }
     }
 }
