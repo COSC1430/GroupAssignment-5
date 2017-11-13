@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="59a3a7b5-2e64-4ab0-b8f7-327969d1a0e5" name="Default" comment="update 7">
+    <list default="true" id="59a3a7b5-2e64-4ab0-b8f7-327969d1a0e5" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Chicken.java" afterPath="$PROJECT_DIR$/src/Chicken.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -284,7 +283,7 @@
       <updated>1510422513684</updated>
       <workItem from="1510422520646" duration="15702000" />
       <workItem from="1510590277788" duration="1189000" />
-      <workItem from="1510593783570" duration="673000" />
+      <workItem from="1510593783570" duration="759000" />
     </task>
     <task id="LOCAL-00001" summary="update 3">
       <created>1510549309752</created>
@@ -335,11 +334,18 @@
       <option name="project" value="LOCAL" />
       <updated>1510582932374</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="update 8">
+      <created>1510599149358</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1510599149358</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17564000" />
+    <option name="totallyTimeSpent" value="17650000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -451,7 +457,8 @@
     <MESSAGE value="update 5" />
     <MESSAGE value="update 6" />
     <MESSAGE value="update 7" />
-    <option name="LAST_COMMIT_MESSAGE" value="update 7" />
+    <MESSAGE value="update 8" />
+    <option name="LAST_COMMIT_MESSAGE" value="update 8" />
     <option name="UPDATE_GROUP_BY_PACKAGES" value="true" />
   </component>
   <component name="XDebuggerManager">
