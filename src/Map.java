@@ -1,16 +1,33 @@
-public class Map {
-
-    public char[][] map = new char[9][9];
-    private Chicken chicken;
-    private Player player;
-   public Map(){
-        for(int i=0;i <9;i++){
+class Map{
+    char grid[][];
+    public Map(){
+        grid = new char[9][9];
+        for(int i=0;i<9;i++){
             for(int j=0;j<9;j++){
-               map[i][j]='-';
+                grid[i][j] = '-';
             }
         }
     }
-    public void upDateMap(int row,int col,char data){
-
+    public void update(int row, int col, char data){
+//Removing previous occurance of data(Chicken or Player)
+        for(int i=0;i<9;i++){
+            for(int j=0;j<9;j++){
+                if(grid[i][j]==data){
+                    grid[i][j] = '-';
+                    break;
+                }
+            }
+        }
+        grid[row][col] = data;
+    }
+    public void printMap(){
+        System.out.println();
+        for(int i=0;i<9;i++){
+            for(int j=0;j<9;j++){
+                System.out.print(grid[i][j]);
+            }
+            System.out.println();
+        }
+        System.out.println();
     }
 }

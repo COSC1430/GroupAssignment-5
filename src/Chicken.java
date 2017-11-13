@@ -1,28 +1,38 @@
 import java.util.Random;
-public class Chicken extends Actor {
+class Chicken extends Actor{
 
-    Map map;
-    static Random rn = new Random();
-    static int rnCol = rn.nextInt(9);
-    static int rnRow = rn.nextInt(9);
-    public Chicken() {
-        super(rnRow,rnCol,'C');
-
-    }
-
-    @Override
-    void move(int row, int col, char data) {
-        int rnNum = rn.nextInt(4);
-        if(borderCheck()) {
-            if (rnNum == 0) {
-                map.upDateMap(rnRow - 1, rnCol, 'C');
-            } else if (rnNum == 1) {
-                map.upDateMap(row + 1, col, 'C');
-            } else if (rnNum == 2) {
-                map.upDateMap(row, col + 1, 'C');
-            } else if (rnNum == 3) {
-                map.upDateMap(row, col - 1, 'C');
-            }
+    char moves[] = {'w','s','a','d'};
+    public Chicken(){
+        Random rand = new Random();
+        currRow = rand.nextInt(9);
+        currCol = rand.nextInt(9);
+//Checking if Chicken does not start at center
+        while(currRow==4 && currCol==4){
+            currRow = rand.nextInt(9);
+            currCol = rand.nextInt(9);
         }
+        data = 'C';
+    }
+    public int move(){
+        Random rand = new Random();
+        int a = rand.nextInt(4);
+        char move = moves[a];
+        while(!borderCheck(move,currRow,currCol)){
+            a = rand.nextInt(4);
+            move = moves[a];
+        }
+        if(move=='w'){
+            currRow-=1;
+        }
+        if(move=='s'){
+            currRow+=1;
+        }
+        if(move=='a'){
+            currCol-=1;
+        }
+        if(move=='d'){
+            currCol+=1;
+        }
+        return 1;
     }
 }
