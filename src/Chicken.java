@@ -4,28 +4,28 @@ class Chicken extends Actor{
     char moves[] = {'w','s','a','d'};
     
     public Chicken(){
-        Random RNG = new Random();
+        Random rn = new Random();
         
-        currRow = RNG.nextInt(9);
+        currRow = rn.nextInt(9);
         
-        currCol = RNG.nextInt(9);
+        currCol = rn.nextInt(9);
         
         while(currRow==4 && currCol==4){
-        	currRow = RNG.nextInt(9);
-            currCol = RNG.nextInt(9);
+        	currRow = rn.nextInt(9);
+            currCol = rn.nextInt(9);
         }
         data = 'C';
     }
     public int move(){
-        Random RNG = new Random();
+        Random rn = new Random();
         
-        int a = RNG.nextInt(4);
+        int a = rn.nextInt(4);
         
         char move = moves[a];
         
         while(!borderCheck(currRow,currCol,move)){
         	
-            a = RNG.nextInt(4);
+            a = rn.nextInt(4);
             
             move = moves[a];
         }
