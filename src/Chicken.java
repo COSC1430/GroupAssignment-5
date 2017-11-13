@@ -29,7 +29,7 @@ class Chicken extends Actor{
             
             move = moves[a];
         }
-        //user input to decide direction
+        //chicken to decide direction
         
         if(move=='w'){	//UP
         	currRow-=1; 
