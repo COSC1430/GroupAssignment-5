@@ -1,34 +1,34 @@
 public class RPG{
     public static void main(String[] args) {
-        Player P = new Player();
-        Chicken C = new Chicken();
+        Player player = new Player();
+        Chicken chicken = new Chicken();
         Map M = new Map();
-        M.update(P.currRow,P.currCol,P.data);
-        M.update(C.currRow,C.currCol,C.data);
+        M.update(player.currRow,player.currCol,player.data);
+        M.update(chicken.currRow,chicken.currCol,chicken.data);
         M.printMap();
-        int in = P.move();
+        int in = player.move();
         while(in!=-1){
             if(in==1){
-                M.update(P.currRow,P.currCol,P.data);
-                if(C.currRow==P.currRow && C.currCol==P.currCol){
+                M.update(player.currRow,player.currCol,player.data);
+                if(chicken.currRow==player.currRow && chicken.currCol==player.currCol){
                     M.printMap();
                     System.out.println("Chicken captured!\nGame over!");
                     break;
                 }
-                C.move();
-                if(C.currRow==P.currRow && C.currCol==P.currCol){
-                    M.update(C.currRow,C.currCol,C.data);
-                    M.update(P.currRow,P.currCol,P.data);
+                chicken.move();
+                if(chicken.currRow==player.currRow && chicken.currCol==player.currCol){
+                    M.update(chicken.currRow,chicken.currCol,chicken.data);
+                    M.update(player.currRow,player.currCol,player.data);
                     M.printMap();
                     System.out.println("Chicken captured!\nGame over!");
                     break;
                 }
-                M.update(C.currRow,C.currCol,C.data);
+                M.update(chicken.currRow,chicken.currCol,chicken.data);
                 M.printMap();
             }else{
                 System.out.println("Invalid Move");
             }
-            in = P.move();
+            in = player.move();
         }
     }
 }
