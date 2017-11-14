@@ -6,10 +6,10 @@ class Player extends Actor{
         data = 'P';
         }
 public int move(){
-        Scanner keyboard = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         System.out.println("up: w | down:s | left:a | right:d | quit:q");
         System.out.print("your move: ");
-        char move = keyboard.next().charAt(0);
+        char move = sc.next().charAt(0);
         if(move=='q'){
         return -1;
         }

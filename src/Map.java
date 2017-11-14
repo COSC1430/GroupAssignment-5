@@ -12,7 +12,7 @@ class Map{
         }
     }
    
-    public void update(int row, int col, char data){ //clean up old user data
+    public void update(int row, int col, char data){
 
         for(int i=0;i<9;i++){
             for(int j=0;j<9;j++){
